@@ -1,0 +1,118 @@
+#header {
+    .runing_string {
+        background-color: #11133E;
+        padding: 7px 20px;
+    }
+
+    .runing_string--item {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 157%;
+    }
+
+    .row_string {
+        width: 32px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+        margin: 0 30px;
+        margin-bottom: 5px;
+    }
+
+    .header_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 22px 0;
+    }
+
+    .logo {
+        min-width: 105px;
+    }
+
+    .menu_list {
+        display: flex;
+        align-items: center;
+        gap: 89px;
+        @include adaptive-value("gap", 89, 0, 1);
+    }
+
+    .menu_link {
+        color: #11133E;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        white-space: nowrap;
+    }
+
+    .search_bar {
+        max-width: 100%;
+    }
+
+    .cart {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .burger_menu {
+        display: none;
+        position: relative;
+        width: 20px;
+        height: 20px;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2A254B;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #2A254B;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: #2A254B;
+        }
+
+        @include media('<desktop') {
+            display: block;
+        }
+    }
+
+    .burger_active {
+        &::after {
+            bottom: 9px;
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            top: 9px;
+            transform: rotate(-45deg);
+        }
+
+        span {
+            opacity: 0;
+        }
+    }
+
+}
