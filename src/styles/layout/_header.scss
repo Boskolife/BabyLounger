@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        @include adaptive-value('gap', 40, 20, 1);
         padding: 22px 0;
     }
 
@@ -67,7 +67,7 @@
 
         display: none;
 
-        @include media('<desktop'){
+        @include media('<desktop') {
             display: block;
         }
     }
@@ -79,7 +79,7 @@
         margin-bottom: 15px;
         display: none;
 
-        @include media('<desktop'){
+        @include media('<desktop') {
             display: block;
         }
     }
@@ -100,6 +100,9 @@
     }
 
     .menu_item {
+        @include adaptive-value("padding-right", 32, -32, 1);
+        @include adaptive-value("padding-left", 32, -32, 1);
+
         @include media('<desktop') {
             padding: 15px 0;
             width: 100%;
@@ -173,7 +176,8 @@
         gap: 8px;
         width: 100%;
 
-        img {
+        svg {
+            fill: #FFF;
             width: 16px;
             height: 16px;
         }
@@ -190,23 +194,100 @@
         }
     }
 
+    .interactive_items {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
     .search_bar {
-        max-width: 100%;
+        max-width: 722px;
+        width: 100%;
+        transition: all .3s ease 0s;
 
         @include media('<desktop') {
-            display: none;
+            width: auto;
         }
     }
 
+    .searchBar_active {
+        width: 100%;
+        transition: all .3s ease 0s;
+    }
+
+    .search_wrap {
+        width: 100%;
+        max-width: 722px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        border-radius: 62px;
+        background: #F0F0F0;
+        padding: 12px 16px;
+        transition: all .3s ease 0s;
+
+        @include media('<desktop') {
+            width: auto;
+            background-color: transparent;
+            column-gap: 0;
+        }
+
+        svg {
+            fill-opacity: 0.4;
+
+            @include media('<desktop') {
+                fill-opacity: 1;
+            }
+        }
+
+        .searchBtn_active {
+            transition: all .3s ease 0s;
+            fill-opacity: 0.4;
+        }
+
+        input {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            width: 100%;
+            color: #1F1F1F;
+
+            @include media('<desktop') {
+                width: 0;
+            }
+
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.40);
+                font-size: 16px;
+            }
+        }
+
+        .searchInput_active {
+            width: 100%;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .searchWrapper_active {
+        background: #F0F0F0;
+        width: 100%;
+        gap: 12px;
+        transition: all .3s ease 0s;
+    }
+
     .cart {
+
         @include media('<desktop') {
             display: none;
         }
 
-        img {
-            width: 40px;
-            height: 40px;
+        svg {
+            fill: #1F1F1F;
         }
+
     }
 
     .burger_menu {
@@ -214,8 +295,8 @@
         position: relative;
         flex-direction: column;
         gap: 5px;
-        width: 24px;
-        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
 
         span {
             width: 100%;
