@@ -1118,7 +1118,7 @@
 
     h2 {
         color: #11133E;
-        font-size: 60px;
+        @include adaptive-value("font-size", 60, 24, 1);
         font-weight: 700;
         line-height: 140%;
         max-width: 1008px;
@@ -1128,7 +1128,6 @@
 
     p {
         color: #11133E;
-        font-size: 18px;
         font-weight: 400;
         line-height: 150%;
         max-width: 655px;
