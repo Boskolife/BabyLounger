@@ -15,7 +15,7 @@ h6,
 .h {
     font-weight: bold;
     margin: 0;
-	color: #1F1F1F;
+    color: #1F1F1F;
 }
 
 h1,
@@ -37,12 +37,18 @@ h3,
 
 h4,
 .h4 {
-    font-size: 24px;
+    color: #070707;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
 }
 
 h5,
 .h5 {
-    font-size: $h5-font-size;
+    color: #FCFAF8;
+    @include adaptive-value("font-size", 22, 16, 1);
+    font-weight: 500;
+    line-height: 140%;
 }
 
 h6,
@@ -52,6 +58,10 @@ h6,
 
 p {
     margin: 0;
+    color: #000;
+    @include adaptive-value("font-size", 18, 16, 1);
+    line-height: 150%;
+
 }
 
 a {
