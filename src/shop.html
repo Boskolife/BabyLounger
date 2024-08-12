@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biliboo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.scss">
+    <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+    {{> header }}
+    <main>
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs_content">
+                    <div class="breadcrumbs_nav">
+                        <a class="breadcrumb" href="#">Homepage</a>
+                        <span>></span>
+                        <a class="breadcrumb" href="#">Shop</a>
+                        <span>></span>
+                        <a class="breadcrumb breadcrumb_active" href="#">Product</a>
+                    </div>
+                    <div class="breadcrumbs_nav--buttons">
+                        <a href="#" class="nav_btn prev_btn">
+                            <img src="./images/prev_arrow.svg" alt="arrow">
+                            <span>Previous Product</span>
+                        </a>
+                        <div class="divider"></div>
+                        <a href="#" class="nav_btn next_btn">
+                            <span>Next Product Product</span>
+                            <img src="./images/next_arrow.svg" alt="arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="shop">
+            <div class="container">
+                <div class="content">
+                    <div class="shop_main_img">
+                        <img src="./images/shop_img.webp" alt="image not found">
+                        <h1>The perfect choice for mom & baby</h1>
+                    </div>
+                    <div class="shop_tems_wrap">
+                        <div class="shop_item">
+                            <button class="item_cart">
+                                <img src="./images/header/cart.svg" alt="cart">
+                            </button>
+                            <div class="item_img">
+                                <img src="./images/garb_img_1.webp" alt="image not found">
+                            </div>
+                            <div class="item_info">
+                                <h2>Baby Lounger for Newborn, Infant and Toddler</h2>
+                                <div class="color_picker--items">
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                </div>
+                                <div class="color_value">
+                                    <span>White</span>
+                                </div>
+                                <div class="price_wrap">
+                                    <span>$109.99</span>
+                                    <button href="#" class="general_btn">shop now</button>
+                                    <button class="item_cart hidden_cart">
+                                        <img src="./images/header/cart.svg" alt="cart">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop_item">
+                            <button class="item_cart">
+                                <img src="./images/header/cart.svg" alt="cart">
+                            </button>
+                            <div class="item_img">
+                                <img src="./images/garb_img_1.webp" alt="image not found">
+                            </div>
+                            <div class="item_info">
+                                <h2>Baby Lounger for Newborn, Infant and Toddler</h2>
+                                <div class="color_picker--items">
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                </div>
+                                <div class="color_value">
+                                    <span>White</span>
+                                </div>
+                                <div class="price_wrap">
+                                    <span>$109.99</span>
+                                    <button href="#" class="general_btn">shop now</button>
+                                    <button class="item_cart hidden_cart">
+                                        <img src="./images/header/cart.svg" alt="cart">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop_item">
+                            <button class="item_cart">
+                                <img src="./images/header/cart.svg" alt="cart">
+                            </button>
+                            <div class="item_img">
+                                <img src="./images/garb_img_1.webp" alt="image not found">
+                            </div>
+                            <div class="item_info">
+                                <h2>Baby Lounger for Newborn, Infant and Toddler</h2>
+                                <div class="color_picker--items">
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                </div>
+                                <div class="color_value">
+                                    <span>White</span>
+                                </div>
+                                <div class="price_wrap">
+                                    <span>$109.99</span>
+                                    <button href="#" class="general_btn">shop now</button>
+                                    <button class="item_cart hidden_cart">
+                                        <img src="./images/header/cart.svg" alt="cart">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop_item ad_item">
+                            <div class="ad_text">
+                                <h3>It is perfect for parents who want both style and function in their baby gear.</h3>
+                            </div>
+                            <div class="ad_img">
+                               <img src="./images/shop_img.png" alt="image not found">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{> gift }}
+        {{> grab_block }}
+    </main>
+    {{> footer }}
+</body>
+
+</html>

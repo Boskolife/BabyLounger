@@ -20,7 +20,9 @@ h6,
 
 h1,
 .h1 {
-    font-size: $h1-font-size;
+    @include adaptive-value("font-size", 60, 32, 1);
+    font-weight: 700;
+    line-height: 140%;
 }
 
 h2,

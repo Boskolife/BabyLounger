@@ -33,6 +33,12 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
+
+@import 'layout/main_template';
+@import 'layout/404';
+@import 'layout/product_page';
+@import 'layout/shop';
+
 @import 'layout/header';
 @import 'layout/common';
 @import 'layout/footer';

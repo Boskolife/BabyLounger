@@ -1,5 +1,7 @@
 initBurger();
 openSearch();
+initMainSwiper();
+initReviewSwiper();
 
 function initBurger() {
   const burger = document.querySelector('.burger_menu');
@@ -46,73 +48,84 @@ function openSearch() {
   });
 }
 
-const swiper = new Swiper('.main_swiper', {
-  slidesPerView: 1.3,
-  centeredSlides: true,
-  spaceBetween: 30,
-  speed: 3000,
-  grabCursor: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-  },
+function initMainSwiper() {
+  const mainSwiperElement = document.querySelector('.swiper_review');
 
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1.05,
-      spaceBetween: 20,
-    },
-    480: {
+  if (mainSwiperElement) {
+    const swiper = new Swiper('.main_swiper', {
       slidesPerView: 1.3,
+      centeredSlides: true,
       spaceBetween: 30,
-    },
-    768: {
-      slidesPerView: 2.1,
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 1.1,
-      spaceBetween: 20,
-    },
-    1440: {
-      slidesPerView: 1.3,
-      spaceBetween: 30,
-    },
-  },
-});
+      speed: 3000,
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
 
-const swiperREview = new Swiper('.swiper_review', {
-  slidesPerView: 2,
-  spaceBetween: 60,
-  speed: 3000,
-  grabCursor: true,
-  loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
+      breakpoints: {
+        320: {
+          slidesPerView: 1.05,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 1.3,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2.1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 1.1,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 1.3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+}
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+function initReviewSwiper() {
+  const reviewSwiperElement = document.querySelector('.swiper_review');
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    },
-    1024: {
+  if (reviewSwiperElement) {
+    const swiperReview = new Swiper('.swiper_review', {
       slidesPerView: 2,
       spaceBetween: 60,
-    },
-    1920: {
-      slidesPerView: 3,
-    },
-  },
-});
+      speed: 3000,
+      grabCursor: true,
+      loop: true,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+        1920: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
+}
