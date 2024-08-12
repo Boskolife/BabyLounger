@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biliboo</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/styles/main.scss">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+  {{> header }}
+  <main>
+    <section class="page_not_found">
+        <div class="container">
+            <div class="content">
+                <div class="not_found_img">
+                    <img src="./images/404.webp" alt="404">
+                </div>
+                <div class="not_found_text-wrap">
+                    <h3>Something is Missing.</h3>
+                    <p>The page you are looking for cannot be found. take a break before trying again </p>
+                    <a href="index.html" class="general_btn">
+                        <img src="./images/arrow_back.svg" alt="arrow">
+                        go back
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  {{> footer }}
+</body>
+
+</html>

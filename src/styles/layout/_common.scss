@@ -32,7 +32,7 @@
     background-color: #F7F7F7;
     padding: 14px 0;
 
-    @include media('<tablet'){
+    @include media('<tablet') {
         display: none;
     }
 
@@ -55,9 +55,10 @@
         gap: 4px;
     }
 
-    .breadcrumbs_nav{
+    .breadcrumbs_nav {
         margin-left: 70px;
-        span{
+
+        span {
             color: rgba(160, 160, 160, 1);
         }
     }
@@ -1827,5 +1828,79 @@
         @include media('<phone') {
             width: 100%;
         }
+    }
+}
+
+//-------404 Page
+
+.page_not_found {
+    @include adaptive-value("padding-top", 64, 5, 1);
+    @include adaptive-value("padding-bottom", 64, 51, 1);
+
+    .content {
+        height: 620px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include adaptive-value("padding-top", 70, 47, 1);
+        @include adaptive-value("padding-bottom", 70, 47, 1);
+        @include adaptive-value("padding-right", 102, 30, 1);
+        @include adaptive-value("padding-left", 102, 30, 1);
+
+        @include media('<phone'){
+            height: 670px;
+        }
+    }
+
+    .not_found_img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .not_found_text-wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 450px;
+
+        h3 {
+            color: #FCFAF8;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            @include adaptive-value("font-size", 36, 24, 1);
+            font-weight: 700;
+            line-height: 111%;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #FCFAF8;
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 16px
+        }
+
+        .general_btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid rgba(17, 19, 62, 0.10);
+            background: #FFF;
+            color: #11133E;
+            width: 188px;
+        }
+
     }
 }
