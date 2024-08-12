@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biliboo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.scss">
+    <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+    {{> header }}
+    <main>
+        <section class="contact_us">
+            <div class="container">
+                <div class="content">
+                    <div class="contact_us--head">
+                        <div class="head_img">
+                            <img src="./images/contact_us_img.webp" alt="image not found">
+                        </div>
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div class="contact_us--body">
+                        <div class="form_wrap">
+                            <h2>Drop Us A Line</h2>
+                            <p>Use the form below to get in touch with the sales team</p>
+                            <form class="contact_us--form">
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Your Name*" required>
+                                    <input type="email" placeholder="Your Email*" required>
+                                </div>
+                                <textarea placeholder="Your Message"></textarea>
+                                <button class="general_btn">send a message</button>
+                            </form>
+                        </div>
+                        <div class="shop_info">
+                            <div class="shop_info--item">
+                                <h3>Our Store</h3>
+                                <a href="#">2163 Phillips Gap Rd, West Jefferson, North Carolina, United States</a>
+                                <a href="tel:+16668888">Phone: +1 666 8888</a>
+                                <a href="mailto:hi.avitex@gmail.com">Email: hi.avitex@gmail.com</a>
+                            </div>
+                            <div class="shop_info--item">
+                                <h3>Open Hours</h3>
+                                <p>Mon - Fri: 7:30am - 8:00pm PST</p>
+                                <p>Saturday: 8:00am - 6:00pm PST</p>
+                                <p>Sunday: 9:00am - 5:00pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./images/map.webp" alt="map">
+            </div>
+        </section>
+    </main>
+    {{> footer }}
+</body>
+
+</html>

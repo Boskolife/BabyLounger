@@ -93,14 +93,14 @@
     }
 }
 
-.color_picker--items {
+.color_pickers--items {
     display: flex;
     align-items: center;
     column-gap: 16px;
-    cursor: pointer;
 }
 
 .color_picker--item {
+    cursor: pointer;
     width: 37px;
     height: 37px;
     background-color: rgba(244, 210, 219, 1);

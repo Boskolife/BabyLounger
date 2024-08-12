@@ -41,7 +41,7 @@
             text-align: center;
         }
     }
-
+ 
     .product_review {
         margin-bottom: 15px;
     }
@@ -193,6 +193,11 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        list-style: none;
+
+        &::-webkit-details-marker{
+            display: none;
+        }
     }
 
     .arrow {
