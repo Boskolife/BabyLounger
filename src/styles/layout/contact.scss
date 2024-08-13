@@ -109,6 +109,14 @@
         gap: 20px;
     }
 
+    .general_btn{
+        max-width: 248px;
+
+        @include media('<phone'){
+            max-width: 100%;
+        }
+    }
+
     .shop_info {
         max-width: 436px;
         width: 100%;

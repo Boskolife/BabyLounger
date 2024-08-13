@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biliboo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/main.scss">
+    <script type="module" src="/js/main.js" defer></script>
+</head>
+
+<body>
+    {{> header }}
+    <main>
+        <section class="cart_page">
+            <div class="container">
+                <h1>Your cart</h1>
+                <div class="content">
+                    <div class="order_list">
+                        <div class="order_item">
+                            <div class="order_info">
+                                <div class="item_img">
+                                    <img src="./images/garb_img_1.webp" alt="image nort found">
+                                </div>
+                                <div class="item_text">
+                                    <h3>Baby Lounger</h3>
+                                    <span>blue</span>
+                                    <p>$109.99</p>
+                                </div>
+                            </div>
+                            <div class="control_items">
+                                <button>
+                                    <img src="./images/bin.svg" alt="bin">
+                                </button>
+                                <div class="quantity">quantity</div>
+                            </div>
+                        </div>
+                        <div class="order_item">
+                            <div class="order_info">
+                                <div class="item_img">
+                                    <img src="./images/garb_img_1.webp" alt="image nort found">
+                                </div>
+                                <div class="item_text">
+                                    <h3>Baby Lounger</h3>
+                                    <span>blue</span>
+                                    <p>$109.99</p>
+                                </div>
+                            </div>
+                            <div class="control_items">
+                                <button>
+                                    <img src="./images/bin.svg" alt="bin">
+                                </button>
+                                <div class="quantity">quantity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary_item--wrap">
+                            <div class="summary_item">
+                                <span>Subtotal</span>
+                                <p>$329.97</p>
+                            </div>
+                            <div class="summary_item discount">
+                                <span>Discount (-20%)</span>
+                                <p>-$113</p>
+                            </div>
+                            <div class="summary_item">
+                                <span>Delivery Fee</span>
+                                <p>$15</p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <span>Total</span>
+                            <p>$231.97</p>
+                        </div>
+                        <form class="promocode">
+                            <div class="promocode_wrap">
+                                <img src="./images/promocode.svg" alt="promocode">
+                                <input type="text" placeholder="Add promo code">
+                            </div>
+                            <button>apply</button>
+                        </form>
+                        <a href="#" class="general_btn">
+                            <span>go to checkout </span>
+                            <img src="./images/white_arrow.svg" alt="arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{> gift }}
+        {{> grab_block }}
+    </main>
+    {{> footer }}
+</body>
+
+</html>
