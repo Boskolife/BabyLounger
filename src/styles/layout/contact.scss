@@ -82,7 +82,6 @@
 
         input,
         textarea {
-            width: 48.5%;
             border-radius: 6px;
             border: 1px solid #F5F2F2;
             background: #FFF;
@@ -94,6 +93,10 @@
             &::placeholder {
                 color: #6B7280;
             }
+        }
+
+        input {
+            width: 48.5%;
         }
 
         textarea {
@@ -109,10 +112,10 @@
         gap: 20px;
     }
 
-    .general_btn{
+    .general_btn {
         max-width: 248px;
 
-        @include media('<phone'){
+        @include media('<phone') {
             max-width: 100%;
         }
     }

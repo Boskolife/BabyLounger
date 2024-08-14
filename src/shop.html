@@ -46,6 +46,32 @@
                     </div>
                     <div class="filter_body">
                         <div class="filter_values">
+                            <div class="buttons_page_view">
+                                <button class="page_view--btn btn_vertical page_view--btn_active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <rect width="32" height="32" rx="4" stroke="#E9E9E9" />
+                                        <path
+                                            d="M14 9.33333C14 8.59695 13.403 8 12.6667 8H12.3337C11.5971 8 11 8.59675 11 9.33333V22.6667C11 23.4032 11.5972 24 12.3337 24H12.6667C13.403 24 14 23.403 14 22.6667V9.33333Z"
+                                            fill="#A0A0A0" />
+                                        <path
+                                            d="M21 9.33333C21 8.59695 20.403 8 19.6667 8H19.3337C18.5971 8 18 8.59675 18 9.33333V22.6667C18 23.4032 18.5972 24 19.3337 24H19.6667C20.403 24 21 23.403 21 22.6667V9.33333Z"
+                                            fill="#A0A0A0" />
+                                    </svg>
+                                </button>
+                                <button class="page_view--btn btn_horizontal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" stroke="#E9E9E9" />
+                                        <path
+                                            d="M9.33333 18C8.59695 18 8 18.597 8 19.3333L8 19.6663C8 20.4029 8.59675 21 9.33333 21L22.6667 21C23.4032 21 24 20.4028 24 19.6663L24 19.3333C24 18.597 23.403 18 22.6667 18L9.33333 18Z"
+                                            fill="#A0A0A0" />
+                                        <path
+                                            d="M9.33333 11C8.59695 11 8 11.597 8 12.3333L8 12.6663C8 13.4029 8.59675 14 9.33333 14L22.6667 14C23.4032 14 24 13.4028 24 12.6663L24 12.3333C24 11.597 23.403 11 22.6667 11L9.33333 11Z"
+                                            fill="#A0A0A0" />
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="sale_input">
                                 <input id="sale" type="checkbox">
                                 <label for="sale">Show only products on sale</label>
@@ -53,13 +79,22 @@
                             <div class="sort_wrap">
                                 <details class="sort_item">
                                     <summary>
+                                        By Product
+                                        <img class="arrow" src="./images/sort_arrow.svg" alt="arrow">
+                                    </summary>
+                                    <div class="sort_values">
+                                        <button>Baby Lounger</button>
+                                        <button>Baby Play Mats</button>
+                                    </div>
+                                </details>
+                                <details class="sort_item">
+                                    <summary>
                                         By Price
                                         <img class="arrow" src="./images/sort_arrow.svg" alt="arrow">
                                     </summary>
                                     <div class="sort_values">
-                                        <button>By Price 1</button>
-                                        <button>By Price 2</button>
-                                        <button>By Price 3</button>
+                                        <button>Highest Price</button>
+                                        <button>Lowest Price</button>
                                     </div>
                                 </details>
                                 <details class="sort_item">
@@ -67,10 +102,15 @@
                                         By Colors
                                         <img class="arrow" src="./images/sort_arrow.svg" alt="arrow">
                                     </summary>
-                                    <div class="sort_values">
-                                        <button>By Colors 1</button>
-                                        <button>By Colors 2</button>
-                                        <button>By Colors 3</button>
+                                    <div class="sort_values color_value">
+                                        <button>
+                                            <span class="color"></span>
+                                            White
+                                        </button>
+                                        <button>
+                                            <span class="color"></span>
+                                            Red
+                                        </button>
                                     </div>
                                 </details>
                             </div>
@@ -87,7 +127,7 @@
                                     <span>$</span>
                                     <span>150</span>
                                 </div>
-                                <span>-</span> 
+                                <span>-</span>
                                 <div class="price_wrap">
                                     <span>$</span>
                                     <span>750</span>
@@ -118,12 +158,60 @@
                             </button>
                         </div>
                     </div>
+                    <div class="filter_body--mob">
+                        <button popovertarget="mob_content" class="filter_body--mob_btn">
+                            Filters
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path d="M12 6L8 11L4 6H12Z" fill="#11133E" />
+                            </svg>
+                        </button>
+                        <div popover id="mob_content" class="filter_body--mob_content">
+                            <button popovertarget="mob_content" class="close_btn">
+                                <img src="./images/Close.svg" alt="close icon">
+                            </button>
+                            <h4>Filters</h4>
+                            <form class="type_filter">
+                                <div class="input_filter_wrap">
+                                    <label for="Loungers">Baby Loungers
+                                        <input id="Loungers" type="checkbox">
+                                    </label>
+                                </div>
+                                <div class="input_filter_wrap">
+                                    <label for="Play Mats">Baby Play Mats
+                                        <input id="Play Mats" type="checkbox">
+                                    </label>
+                                </div>
+                            </form>
+                            <div class="color_pickers--filter">
+                                <span>Color</span>
+                                <div class="color_pickers--items">
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                    <div class="color_picker--item"></div>
+                                </div>
+                            </div>
+                            <div class="price_filter">
+                                <span>Price</span>
+                                <input type="range">
+                            </div>
+                            <div class="sale_input">
+                                <input id="sale" type="checkbox">
+                                <label for="sale">Show only products on sale</label>
+                            </div>
+                            <div class="filter_mob--buttons_wrap">
+                                <button class="general_btn">Clear All</button>
+                                <button class="general_btn">Aplly</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="shop_items_wrap">
                         <div class="shop_item">
-                            <button class="item_cart">
-                                <img src="./images/header/cart.svg" alt="cart">
-                            </button>
                             <div class="item_img">
+                                <button class="item_cart">
+                                    <img src="./images/header/cart.svg" alt="cart">
+                                </button>
                                 <img src="./images/garb_img_1.webp" alt="image not found">
                             </div>
                             <div class="item_info">
@@ -146,10 +234,10 @@
                             </div>
                         </div>
                         <div class="shop_item">
-                            <button class="item_cart">
-                                <img src="./images/header/cart.svg" alt="cart">
-                            </button>
                             <div class="item_img">
+                                <button class="item_cart">
+                                    <img src="./images/header/cart.svg" alt="cart">
+                                </button>
                                 <img src="./images/garb_img_1.webp" alt="image not found">
                             </div>
                             <div class="item_info">
@@ -172,10 +260,10 @@
                             </div>
                         </div>
                         <div class="shop_item">
-                            <button class="item_cart">
-                                <img src="./images/header/cart.svg" alt="cart">
-                            </button>
                             <div class="item_img">
+                                <button class="item_cart">
+                                    <img src="./images/header/cart.svg" alt="cart">
+                                </button>
                                 <img src="./images/garb_img_1.webp" alt="image not found">
                             </div>
                             <div class="item_info">

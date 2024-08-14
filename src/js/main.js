@@ -2,6 +2,7 @@ initBurger();
 openSearch();
 initMainSwiper();
 initReviewSwiper();
+changePageView();
 
 function initBurger() {
   const burger = document.querySelector('.burger_menu');
@@ -128,4 +129,32 @@ function initReviewSwiper() {
       },
     });
   }
+}
+function changePageView() {
+  const productWrap = document.querySelector('.shop_items_wrap');
+  const productItem = document.querySelectorAll('.shop_item');
+  const horzBtn = document.querySelector('.btn_horizontal');
+  const vertBtn = document.querySelector('.btn_vertical');
+
+  vertBtn.addEventListener('click', () => {
+    vertBtn.classList.add('page_view--btn_active');
+    horzBtn.classList.remove('page_view--btn_active');
+    productWrap.classList.add('shop_items_wrap--vertical');
+    productWrap.classList.remove('shop_items_wrap--horizontal');
+    productItem.forEach((item) => {
+      item.classList.add('shop_item--vertical');
+      item.classList.remove('shop_item--horizontal');
+    });
+  });
+
+  horzBtn.addEventListener('click', () => {
+    vertBtn.classList.remove('page_view--btn_active');
+    horzBtn.classList.add('page_view--btn_active');
+    productWrap.classList.add('shop_items_wrap--horizontal');
+    productWrap.classList.remove('shop_items_wrap--vertical');
+    productItem.forEach((item) => {
+      item.classList.add('shop_item--horizontal');
+      item.classList.remove('shop_item--vertical');
+    });
+  });
 }

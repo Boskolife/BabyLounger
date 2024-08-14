@@ -63,7 +63,6 @@ p {
     color: #000;
     @include adaptive-value("font-size", 18, 16, 1);
     line-height: 150%;
-
 }
 
 a {
