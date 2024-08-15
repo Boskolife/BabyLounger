@@ -13,85 +13,6 @@
 <body>
     {{> header }}
     <main class="cart_template">
-        <section class="cart_section">
-            <div class="container">
-                <h1>Your cart</h1>
-                <div class="cart_content">
-                    <div class="order_list">
-                        <div class="order_item">
-                            <div class="order_info">
-                                <div class="item_img">
-                                    <img src="./images/garb_img_1.webp" alt="image nort found">
-                                </div>
-                                <div class="item_text">
-                                    <h3>Baby Lounger</h3>
-                                    <span>blue</span>
-                                    <p>$109.99</p>
-                                </div>
-                            </div>
-                            <div class="control_items">
-                                <button>
-                                    <img src="./images/bin.svg" alt="bin">
-                                </button>
-                                <div class="quantity">quantity</div>
-                            </div>
-                        </div>
-                        <div class="order_item">
-                            <div class="order_info">
-                                <div class="item_img">
-                                    <img src="./images/garb_img_1.webp" alt="image nort found">
-                                </div>
-                                <div class="item_text">
-                                    <h3>Baby Lounger</h3>
-                                    <span>blue</span>
-                                    <p>$109.99</p>
-                                </div>
-                            </div>
-                            <div class="control_items">
-                                <button>
-                                    <img src="./images/bin.svg" alt="bin">
-                                </button>
-                                <div class="quantity">quantity</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order_summary">
-                        <h2>Order Summary</h2>
-                        <div class="summary_item--wrap">
-                            <div class="summary_item">
-                                <span>Subtotal</span>
-                                <p>$329.97</p>
-                            </div>
-                            <div class="summary_item discount">
-                                <span>Discount (-20%)</span>
-                                <p>-$113</p>
-                            </div>
-                            <div class="summary_item">
-                                <span>Delivery Fee</span>
-                                <p>$15</p>
-                            </div>
-                        </div>
-                        <div class="total">
-                            <span>Total</span>
-                            <p>$231.97</p>
-                        </div>
-                        <form class="promocode">
-                            <div class="promocode_wrap">
-                                <img src="./images/promocode.svg" alt="promocode">
-                                <input type="text" placeholder="Add promo code">
-                            </div>
-                            <button>apply</button>
-                        </form>
-                        <a href="#" class="general_btn">
-                            <span>go to checkout </span>
-                            <img src="./images/white_arrow.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {{> gift }}
-        {{> grab_block }}
         <section class="cart_step_one">
             <div class="container">
                 <!-- <div class="steps_wrap">
@@ -168,6 +89,16 @@
                                                 <h6>Baby Lounger</h6>
                                             </div>
                                             <span>$109.99</span>
+                                        </div>
+                                    </div>
+                                    <div class="order_payment_info">
+                                        <div class="info_item">
+                                            <span>Address</span>
+                                            <p>1131 Dusty Townline, Jacksonville, TX 40322</p>
+                                        </div>
+                                        <div class="info_item">
+                                            <span>Shipment method</span>
+                                            <p>Free</p>
                                         </div>
                                     </div>
                                     <div class="summary_item--wrap">
@@ -395,6 +326,72 @@
                                 </g>
                             </svg>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cart_step_three">
+            <div class="container">
+                <div class="content">
+                    <div class="order_details--mob">
+                        <div open class="order_details--mob--title">
+                            <h2>Summary
+                                <!-- <img class="arrow" src="./images/arrow.svg" alt="arrow"> -->
+                            </h2>
+                            <div class="order_details--mob-body">
+                                <div class="product_items--wrap">
+                                    <div class="product_item">
+                                        <div class="product_item--info">
+                                            <img src="./images/garb_img_1.webp" alt="image not found">
+                                            <h6>Baby Lounger</h6>
+                                        </div>
+                                        <span>$109.99</span>
+                                    </div>
+                                    <div class="product_item">
+                                        <div class="product_item--info">
+                                            <img src="./images/garb_img_1.webp" alt="image not found">
+                                            <h6>Baby Lounger</h6>
+                                        </div>
+                                        <span>$109.99</span>
+                                    </div>
+                                    <div class="product_item">
+                                        <div class="product_item--info">
+                                            <img src="./images/garb_img_1.webp" alt="image not found">
+                                            <h6>Baby Lounger</h6>
+                                        </div>
+                                        <span>$109.99</span>
+                                    </div>
+                                </div>
+                                <div class="order_payment_info">
+                                    <div class="info_item">
+                                        <span>Address</span>
+                                        <p>1131 Dusty Townline, Jacksonville, TX 40322</p>
+                                    </div>
+                                    <div class="info_item">
+                                        <span>Shipment method</span>
+                                        <p>Free</p>
+                                    </div>
+                                </div>
+                                <div class="summary_item--wrap">
+                                    <div class="summary_item subtotal">
+                                        <span>Subtotal</span>
+                                        <p>$329.97</p>
+                                    </div>
+                                    <div class="summary_item discount">
+                                        <span>Discount (-20%)</span>
+                                        <p>-$113</p>
+                                    </div>
+                                    <div class="summary_item fee">
+                                        <span>Delivery Fee</span>
+                                        <p>$15</p>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <span>Total</span>
+                                    <p>$231.97</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

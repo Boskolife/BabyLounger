@@ -93,7 +93,7 @@
     }
 }
 
-.color_pickers--items {
+.color_picker--items {
     display: flex;
     align-items: center;
     column-gap: 16px;
@@ -105,5 +105,21 @@
     height: 37px;
     background-color: rgba(244, 210, 219, 1);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        display: none;
+        width: 16px;
+        height: 16px;
+    }
+
+    &.active_color{
+        border: 1px solid #9F9F9F;
+        img{
+            display: block;
+        }
+    }
 }
 

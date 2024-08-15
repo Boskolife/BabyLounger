@@ -41,7 +41,7 @@
             text-align: center;
         }
     }
- 
+
     .product_review {
         margin-bottom: 15px;
     }
@@ -195,7 +195,7 @@
         cursor: pointer;
         list-style: none;
 
-        &::-webkit-details-marker{
+        &::-webkit-details-marker {
             display: none;
         }
     }
@@ -395,15 +395,84 @@
         }
     }
 
-    .ratings {
-        max-width: 321px;
+    .rating-system {
+        background-color: transparent;
+        max-width: 312px;
         width: 100%;
-        min-width: 300px;
 
-        @include media('<desktop') {
-            min-width: 100%;
-            max-width: 100%;
+        @include media('<tablet'){
+            margin: 0 auto;
         }
+    }
+
+    .average-rating {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .rating-value {
+        color: #1F1F1F;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .total-ratings {
+        color: #696C70;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .total-ratings-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stars {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .star {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .rating-breakdown {
+        font-size: 0.9em;
+    }
+
+    .rating-bar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+
+        span {
+            width: 30px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+    }
+
+    .bar {
+        flex: 1;
+        height: 10px;
+        background: #ddd;
+        margin: 0 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .fill {
+        height: 100%;
+        background: #ffcc00;
     }
 
     .image_preview {
@@ -429,6 +498,7 @@
             width: 100%;
             max-height: 120px;
             border-radius: 8px;
+            object-fit: cover;
         }
     }
 
