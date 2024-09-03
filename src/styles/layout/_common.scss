@@ -19,6 +19,14 @@ html {
     }
 }
 
+
+summary {
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
+
 .container {
     max-width: 1460px;
     width: 100%;
