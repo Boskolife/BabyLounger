@@ -1040,4 +1040,10 @@
         width: 100%;
         margin: 0 auto 24px auto;
     }
+
+    .general_btn{
+        @include media('<phone'){
+            width: 100%;
+        }
+    }
 }
