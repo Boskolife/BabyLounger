@@ -116,6 +116,11 @@
     align-items: center;
     justify-content: center;
 
+    @include media('<tablet') {
+        width: 24px;
+        height: 24px;
+    }
+
     img {
         display: none;
         width: 16px;
