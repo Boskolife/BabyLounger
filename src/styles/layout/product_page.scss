@@ -366,7 +366,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1px;
+        padding-bottom: 1px;
     }
 
     .block_item {
@@ -738,7 +738,7 @@
 
     .customer_review--btn {
         margin: 0 auto;
-        max-width: 244px;
+        max-width: max-content;
         width: 100%;
 
         @include media('<phone') {
@@ -774,9 +774,15 @@
         border-radius: 6px;
         border: 1px solid #F5F2F2;
         background: #FFF;
+        transition: all .3s ease 0s;
 
         @include media('<desktop') {
             width: 100%;
+        }
+
+        &:focus{
+            border-color: #9DE3CD;
+            transition: all .3s ease 0s;
         }
     }
 
